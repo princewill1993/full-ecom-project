@@ -7,7 +7,16 @@ import { connectToDatabase } from "./config/mongoDBConnection.js";
 const PORT = process.env.PORT || 3000;
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "full-ecom-project.vercel.app/",
+      "full-ecom-project.vercel.app",
+      "https://localhost:5173/",
+      "https://localhost:5173",
+    ],
+  })
+);
 app.use(express.json());
 
 app.get("/", (req, res) => {
