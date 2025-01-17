@@ -5,4 +5,7 @@ export function formatCurrency(amount) {
   }).format(amount);
 }
 
-export const serverUrl = "http://localhost:3000/api/v1";
+export const serverUrl =
+  process.env.NODE_ENV === "production"
+    ? "https://full-ecom-project.onrender.com/api/v1"
+    : "http://localhost:3000/api/v1";
