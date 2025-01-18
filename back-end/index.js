@@ -10,8 +10,8 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "full-ecom-project.vercel.app/",
-      "full-ecom-project.vercel.app",
+      "https://full-ecom-project.vercel.app/",
+      "https://full-ecom-project.vercel.app",
       "https://localhost:5173/",
       "https://localhost:5173",
     ],
