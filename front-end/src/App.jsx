@@ -6,6 +6,8 @@ import ProductDetails from "./pages/ProductDetails";
 import MainLayout from "./Layout/MainLayout";
 import HomePage from "./pages/HomePage";
 import Checkout from "./pages/Checkout";
+import Admin from "./pages/protected/Admin";
+import OrderDetails from "./pages/protected/OrderDetails";
 
 function App() {
   return (
@@ -20,6 +22,11 @@ function App() {
 
         <Route path="checkout" element={<Checkout />} />
         <Route path="cart" element={<Cart />} />
+
+        <Route path="admin">
+          <Route index element={<Admin />} />
+          <Route path=":order_id" element={<OrderDetails />} />
+        </Route>
       </Route>
     </Routes>
   );
